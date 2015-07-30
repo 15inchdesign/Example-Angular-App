@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="initApp" ng-controller="ListPr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example || Angular</title>
+    <!-- //CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="">
+    <div class="sidebar">
+        <div class="filter">
+            <div class="wra">
+                <input type="search" class="search"  placeholder="Filter" ng-model="query"/><span class="search"></span>
+            </div>
+        </div>
+        <nav class="listProducts">
+            <ul>
+                <li class="list" ng-repeat="pr in listProducts">
+                    <a href="#/products/{{listProducts.indexOf(pr)}}">{{pr.name}}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+<div ng-view="">
+    <!-- view's -->
+</div>
+
+<!-- Local script via node_modules & other scripts for app -->
+<script src="node_modules/angular/angular.min.js" type="application/javascript"></script>
+<script src="node_modules/angular-route/angular-route.min.js" type="application/javascript"></script>
+<script src="js/app.js" type="application/javascript"></script>
+<script src="js/controller.js" type="application/javascript"></script>
+</body>
+</html>

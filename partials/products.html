@@ -1,0 +1,28 @@
+<main class="products">
+    <table>
+                <tr ng-repeat="item in listProducts | filter: query | limitTo: 1">
+                 <td>Name</td>
+                <td> {{item.name}}</td>
+                </tr>
+            <tr ng-repeat="item in listProducts | filter: query | limitTo: 1">
+                <td>Manufacturer</td>
+                <td>{{item.manufacturer}}</td>
+            </tr>
+            <tr ng-repeat="item in listProducts | filter: query | limitTo: 1">
+                <td>Price</td>
+                <td>{{item.price}}</td>
+            </tr>
+            <tr ng-repeat="item in listProducts | filter: query | limitTo: 1">
+                <td>In-stock</td>
+                <td>{{item.in_stock}}</td>
+            </tr>
+            <tr ng-repeat="item in listProducts | filter: query | limitTo: 1">
+                <td>Item model number</td>
+                <td>{{item.imn}}</td>
+            </tr>
+            <tr ng-repeat="item in listProducts | filter: query | limitTo: 1">
+                <td>Description</td>
+                <td>{{item.description}}</td>
+            </tr>
+        </table>
+    </main>
